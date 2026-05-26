@@ -1,0 +1,44 @@
+Simulação de Execução - Questão 3
+
+========= BANCO DINHEIRO CERTO =========
+1. Cadastrar Conta
+2. Consultar Saldo
+3. Efetuar Depósito
+4. Efetuar Saque
+5. Exibir Cadastro Completo
+0. Sair
+========================================
+Escolha uma opção: 1
+Selecione o tipo de conta (1 - Corrente | 2 - Poupança): 1
+Informe o número da conta: 1010
+Nome do titular: Joao Pedro Barboza
+CPF: 123.456.789-00
+Telefone: 81999999999
+Saldo inicial: R$ 500.00
+Conta cadastrada com sucesso!
+
+========= BANCO DINHEIRO CERTO =========
+1. Cadastrar Conta
+...
+Escolha uma opção: 3
+Selecione o tipo de conta (1 - Corrente | 2 - Poupança): 1
+Informe o número da conta: 1010
+Informe o valor do depósito: R$ 100.00
+Depósito realizado com sucesso! Novo saldo: R$ 600.00
+
+========= BANCO DINHEIRO CERTO =========
+...
+Escolha uma opção: 4
+Selecione o tipo de conta (1 - Corrente | 2 - Poupança): 1
+Informe o número da conta: 1010
+Informe o valor do saque: R$ 1000.00
+Aviso: Não existe saldo suficiente para este saque.
+
+========= BANCO DINHEIRO CERTO =========
+...
+Escolha uma opção: 5
+Selecione o tipo de conta (1 - Corrente | 2 - Poupança): 1
+
+=== Relatório de Contas Cadastradas ===
+Conta: 1010 | Titular: Joao Pedro Barboza   | Telefone: 81999999999
+=======================================
