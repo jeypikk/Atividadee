@@ -1,4 +1,4 @@
-Simulação de Execução - Questão 1 (Resumida para 3 estados por praticidade de leitura, mas o código contém 26)
+Simulação de Execução - Questão 1 (Resumida para 3 estados pra ficar mais fácil, mas o código tem 26)
 
 --- Coletando dados do Estado 1 ---
 Nome do estado: Pernambuco
