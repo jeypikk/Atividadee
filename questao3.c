@@ -11,22 +11,17 @@ typedef struct {
     char telefone[20];
     float saldo;
 } Conta;
-
 typedef struct {
     Conta contas[MAX_CONTAS];
     int qtd;
 } Cadastro;
-
-// (a) Função de busca
 int buscarConta(Cadastro cad, int numero) {
-    if (cad.qtd == 0) return -1; // Cadastro vazio
+    if (cad.qtd == 0) return -1;
     for (int i = 0; i < cad.qtd; i++) {
-        if (cad.contas[i].numero == numero) return i; // Encontrou, retorna a posição
+        if (cad.contas[i].numero == numero) return i;
     }
-    return -2; // Não encontrou
+    return -2;
 }
-
-// (b) Procedimento para cadastrar nova conta
 void cadastrarConta(Cadastro *cad, int numero) {
     int pos = buscarConta(*cad, numero);
     if (pos >= 0) {
@@ -49,8 +44,6 @@ void cadastrarConta(Cadastro *cad, int numero) {
         printf("Conta cadastrada com sucesso!\n");
     }
 }
-
-// (c) Procedimento para consultar saldo
 void consultarSaldo(Cadastro cad, int numero) {
     int pos = buscarConta(cad, numero);
     if (pos >= 0) {
@@ -59,8 +52,6 @@ void consultarSaldo(Cadastro cad, int numero) {
         printf("Aviso: A conta informada não está cadastrada.\n");
     }
 }
-
-// (d) Procedimento para fazer um depósito
 void depositar(Cadastro *cad, int numero) {
     int pos = buscarConta(*cad, numero);
     if (pos >= 0) {
@@ -77,8 +68,6 @@ void depositar(Cadastro *cad, int numero) {
         printf("Aviso: A conta informada não está cadastrada.\n");
     }
 }
-
-// (e) Procedimento para fazer um saque
 void sacar(Cadastro *cad, int numero) {
     int pos = buscarConta(*cad, numero);
     if (pos >= 0) {
@@ -97,8 +86,6 @@ void sacar(Cadastro *cad, int numero) {
         printf("Aviso: A conta informada não está cadastrada.\n");
     }
 }
-
-// (f) Procedimento para exibir os dados do cadastro
 void exibirContas(Cadastro cad) {
     if (cad.qtd == 0) {
         printf("Nenhuma conta cadastrada neste banco.\n");
@@ -111,12 +98,10 @@ void exibirContas(Cadastro cad) {
     }
     printf("=======================================\n");
 }
-
 int main() {
     Cadastro cad_corrente = {.qtd = 0};
     Cadastro cad_poupanca = {.qtd = 0};
     int opcao, tipo, numero;
-
     do {
         printf("\n========= BANCO DINHEIRO CERTO =========\n");
         printf("1. Cadastrar Conta\n");
@@ -128,7 +113,6 @@ int main() {
         printf("========================================\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
-
         if (opcao >= 1 && opcao <= 5) {
             printf("Selecione o tipo de conta (1 - Corrente | 2 - Poupança): ");
             scanf("%d", &tipo);
@@ -136,14 +120,11 @@ int main() {
                 printf("Tipo de conta inválido! Tente novamente.\n");
                 continue;
             }
-            
             Cadastro *cad_atual = (tipo == 1) ? &cad_corrente : &cad_poupanca;
-
             if (opcao != 5) {
                 printf("Informe o número da conta: ");
                 scanf("%d", &numero);
             }
-
             switch (opcao) {
                 case 1: cadastrarConta(cad_atual, numero); break;
                 case 2: consultarSaldo(*cad_atual, numero); break;
@@ -155,7 +136,6 @@ int main() {
             printf("Opção inválida!\n");
         }
     } while (opcao != 0);
-
     printf("Encerrando o sistema do Banco Dinheiro Certo. Até logo!\n");
     return 0;
 }
