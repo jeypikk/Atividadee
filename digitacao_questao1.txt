@@ -1,0 +1,30 @@
+Simulação de Execução - Questão 1 (Resumida para 3 estados por praticidade de leitura, mas o código contém 26)
+
+--- Coletando dados do Estado 1 ---
+Nome do estado: Pernambuco
+Número de veículos (em 2007): 1500000
+Número de acidentes (em 2007): 50000
+
+--- Coletando dados do Estado 2 ---
+Nome do estado: Paraíba
+Número de veículos (em 2007): 800000
+Número de acidentes (em 2007): 20000
+
+--- Coletando dados do Estado 3 ---
+Nome do estado: São Paulo
+Número de veículos (em 2007): 15000000
+Número de acidentes (em 2007): 300000
+
+--- Estatísticas Extremas ---
+Maior número de acidentes: 300000 (Estado: São Paulo)
+Menor número de acidentes: 20000 (Estado: Paraíba)
+
+--- Percentual de Veículos em Acidentes por Estado ---
+Pernambuco: 3.33%
+Paraíba: 2.50%
+São Paulo: 2.00%
+
+Média de acidentes no país: 123333.33
+
+--- Estados com acidentes acima da média nacional (123333.33) ---
+- São Paulo (Acidentes: 300000)
